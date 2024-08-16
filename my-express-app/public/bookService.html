@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book a Tech Service</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(to right, #7f8c8d, #3498db);
+            margin: 0;
+            color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background: #ffffff;
+            color: #3498db;
+            padding: 20px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 36px;
+            text-align: center;
+        }
+
+        nav {
+            margin-top: 15px;
+            text-align: center;
+        }
+
+        nav a {
+            color: #3498db;
+            text-decoration: none;
+            font-size: 18px;
+            margin: 0 15px;
+            padding: 8px 12px;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #ffffff;
+            color: #2980b9;
+        }
+
+        .form-container {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 450px;
+            margin: auto;
+            box-sizing: border-box;
+        }
+
+        .form-container h2 {
+            margin-bottom: 25px;
+            font-size: 30px;
+            text-align: center;
+            color: #333333;
+        }
+
+        .form-container label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: 600;
+            color: #444444;
+        }
+
+        .form-container input,
+        .form-container textarea,
+        .form-container select {
+            width: 100%;
+            padding: 14px;
+            margin-bottom: 20px;
+            border: 1px solid #cccccc;
+            border-radius: 6px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+
+        .form-container input:focus,
+        .form-container textarea:focus,
+        .form-container select:focus {
+            border-color: #3498db;
+            outline: none;
+            box-shadow: 0 0 6px rgba(52, 152, 219, 0.2);
+        }
+
+        .form-container button {
+            width: 100%;
+            padding: 14px;
+            background-color: #3498db;
+            border: none;
+            color: #ffffff;
+            font-size: 18px;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .form-container button:hover {
+            background-color: #2980b9;
+        }
+
+        .form-container button:active {
+            background-color: #1f4f7d;
+        }
+
+        @media (max-width: 480px) {
+            .form-container {
+                padding: 20px;
+                width: 90%;
+            }
+
+            .form-container h2 {
+                font-size: 26px;
+            }
+
+            .form-container input,
+            .form-container textarea,
+            .form-container select {
+                font-size: 15px;
+                padding: 12px;
+            }
+
+            .form-container button {
+                font-size: 16px;
+                padding: 12px;
+            }
+        }
+
+        footer {
+            background: #2980b9;
+            color: white;
+            padding: 20px;
+            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            text-align: center;
+        }
+        
+        footer a {
+            color: #f0f0f0;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 16px;
+        }
+        
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Tech Service</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+            <a href="bookService.html">Book a Service</a>
+        </nav>
+    </header>
+    <div class="form-container">
+        <h2>Book a Tech Service</h2>
+        <form action="/submit-booking" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="service">Service:</label>
+            <select id="service" name="service" required>
+                <option value="Computer Repair">Computer Repair</option>
+                <option value="Software Installation">Software Installation</option>
+                <option value="Network Setup">Network Setup</option>
+                <option value="Data Recovery">Data Recovery</option>
+            </select>
+
+            <label for="date">Preferred Date:</label>
+            <input type="date" id="date" name="date" required>
+
+            <label for="time">Preferred Time:</label>
+            <input type="time" id="time" name="time" required>
+
+            <label for="additionalDetails">Additional Details:</label>
+            <textarea id="additionalDetails" name="additionalDetails"></textarea>
+
+            <button type="submit">Book Service</button>
+        </form>
+    </div>
+    <script src="script.js"></script>
+    <footer>
+        <p>&copy; 2024 Tech Service. All rights reserved.</p>
+        <p>
+            <a href="index.html">Home</a> | 
+            <a href="about.html">About</a> | 
+            <a href="contact.html">Contact</a> | 
+            <a href="bookService.html">Book a Service</a>
+        </p>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Tech Service</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(to right, #e74c3c, #c0392b);
+            margin: 0;
+            color: #fff;
+            text-align: center;
+        }
+
+        header {
+            background: #ffffff;
+            color: #e74c3c;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 36px;
+        }
+
+        nav {
+            margin-top: 15px;
+        }
+
+        nav a {
+            color: #e74c3c;
+            text-decoration: none;
+            font-size: 18px;
+            margin: 0 15px;
+            padding: 8px 12px;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #ffffff;
+            color: #c0392b;
+        }
+
+        .content {
+            padding: 40px;
+            max-width: 800px;
+            margin: 0 auto;
+            background: #ffffff;
+            color: #333;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .content h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+            color: #e74c3c;
+        }
+
+        .content p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin: 10px 0;
+        }
+
+        .contact-info {
+            margin: 20px 0;
+        }
+
+        .contact-info span {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .contact-info strong {
+            display: block;
+            font-size: 20px;
+            margin-bottom: 5px;
+        }
+
+        form {
+            margin-top: 20px;
+            padding: 20px;
+            background: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        form input, form textarea {
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        form button {
+            background-color: #e74c3c;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 18px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        form button:hover {
+            background-color: #c0392b;
+        }
+
+      
+        footer {
+            background: #c0392b;;
+            color: white;
+            padding: 20px;
+            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            text-align: center;
+        }
+        
+        footer a {
+            color: #f0f0f0;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 16px;
+        }
+        
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Tech Service</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+            <a href="bookService.html">Book a Service</a>
+        </nav>
+    </header>
+    <div class="content">
+        <h2>Contact Us</h2>
+        <p>We'd love to hear from you! For inquiries or support, please use the following contact details:</p>
+        <div class="contact-info">
+            <strong>Email:</strong>
+            <span>support@techservice.com</span>
+            <strong>Phone:</strong>
+            <span>0712345678</span>
+            <strong>Address:</strong>
+            <span>Moi Avenue, Nairobi, Kenya</span>
+        </div>
+        <h3>Send Us a Message</h3>
+        <form action="/submit_form" method="post">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <input type="tel" name="phone" placeholder="Your Phone Number">
+            <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+      
+    </div>
+    
+    <script src="script.js"></script>
+    <footer>
+        <p>&copy; 2024 Tech Service. All rights reserved.</p>
+        <p>
+            <a href="index.html">Home</a> | 
+            <a href="about.html">About</a> | 
+            <a href="contact.html">Contact</a> | 
+            <a href="bookService.html">Book a Service</a>
+        </p>
+    </footer>
+</body>
+
+</html>
